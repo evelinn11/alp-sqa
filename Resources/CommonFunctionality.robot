@@ -9,7 +9,7 @@ ${COOKIEVALUE}    2c7fa4d038605d7b9aa56c3cb05b90ab
 *** Keywords ***
 Start TestCase
     ${chrome_options}=    Set Variable    add_argument("--disable-notifications")
-    Open Browser  ${URL}   chrome
+    Open Browser  ${URL}   chrome  options=${chrome_options}
     Maximize Browser Window
     Add Cookie  ${COOKIENAME}  ${COOKIEVALUE}
     Reload Page
