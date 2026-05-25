@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}    https://trial.uc.ac.id/
 ${COOKIENAME}    tokencis
-${COOKIEVALUE}    2c7fa4d038605d7b9aa56c3cb05b90ab
+${COOKIEVALUE}    bc95940ddf2bdec6448e185651dbd0f0
 
 *** Keywords ***
 Start TestCase
