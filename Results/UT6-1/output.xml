@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on darwin)" generated="2026-05-30T17:39:44.500481" rpa="false" schemaversion="5">
+<suite id="s1" name="UT6-1" source="/Users/evelinalim/UC/SQA/alp-sqa/Tests/ProgramList/UT6-1.robot">
+<test id="s1-t1" name="UT6-1 Melakukan cetak kegiatan yang didaftarkan dalam bentuk file Excel" line="7">
+<kw name="Start TestCase" owner="CommonFunctionality">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-30T17:39:44.553691" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1031457f0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.553245" elapsed="0.000462"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.553758" elapsed="0.000093"/>
+</kw>
+<kw name="Normalize Path" owner="OperatingSystem">
+<msg time="2026-05-30T17:39:44.553940" level="INFO">${NORMALIZED_DOWNLOAD_DIR} = /Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads</msg>
+<var>${NORMALIZED_DOWNLOAD_DIR}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.553889" elapsed="0.000061"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-05-30T17:39:44.554030" level="INFO" html="true">Directory '&lt;a href="file:///Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads"&gt;/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads&lt;/a&gt;' already exists.</msg>
+<arg>${NORMALIZED_DOWNLOAD_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.553979" elapsed="0.000067"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-30T17:39:44.554235" level="INFO">${prefs} = {'download.default_directory': '/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads', 'download.prompt_for_download': False, 'directory_upgrade': True}</msg>
+<var>${prefs}</var>
+<arg>download.default_directory=${NORMALIZED_DOWNLOAD_DIR}</arg>
+<arg>download.prompt_for_download=${FALSE}</arg>
+<arg>directory_upgrade=${TRUE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.554077" elapsed="0.000167"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.554278" elapsed="0.000078"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:44.554464" level="INFO">Opening browser 'chrome' to base url 'https://trial.uc.ac.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.554396" elapsed="4.083544"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-30T17:39:48.638290" elapsed="0.356675"/>
+</kw>
+<kw name="Add Cookie" owner="SeleniumLibrary">
+<arg>${COOKIENAME}</arg>
+<arg>${COOKIEVALUE}</arg>
+<doc>Adds a cookie to your current session.</doc>
+<status status="PASS" start="2026-05-30T17:39:48.995184" elapsed="0.002083"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-05-30T17:39:48.997335" elapsed="3.215620"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="scrolldashboard"]/button[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.213176" elapsed="0.009005"/>
+</kw>
+<status status="PASS" start="2026-05-30T17:39:44.552981" elapsed="7.669317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@data-bs-target="#mainmenu-modal"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.222535" elapsed="0.011755"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:52.234664" level="INFO">Clicking button '//button[@data-bs-target="#mainmenu-modal"]'.</msg>
+<arg>//button[@data-bs-target="#mainmenu-modal"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.234500" elapsed="0.030618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.265310" elapsed="0.220675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:52.486416" level="INFO">Clicking element '//a[contains(text(), 'My Activity')]'.</msg>
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.486224" elapsed="0.031121"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.517503" elapsed="0.219211"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T17:39:52.736984" elapsed="0.273179"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:53.011063" level="INFO">Clicking element '//a[contains(text(), 'Student International')]'.</msg>
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T17:39:53.010655" elapsed="0.034431"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:53.045324" elapsed="0.223967"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T17:39:53.269616" elapsed="0.274027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:53.544528" level="INFO">Clicking element '//a[contains(text(), 'My Outbound')]'.</msg>
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T17:39:53.544207" elapsed="0.752289"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(text(), 'My Outbound Program List')]</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:54.296646" elapsed="0.006514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[contains(@class, 'buttons-excel')]</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T17:39:54.303277" elapsed="0.005486"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-05-30T17:39:54.309048" level="INFO">Executing JavaScript:
+document.querySelector('.buttons-excel').click();
+Without any arguments.</msg>
+<arg>document.querySelector('.buttons-excel').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-05-30T17:39:54.308845" elapsed="0.007850"/>
+</kw>
+<kw name="Normalize Path" owner="OperatingSystem">
+<msg time="2026-05-30T17:39:54.317039" level="INFO">${NORMALIZED_DOWNLOAD_DIR} = /Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads</msg>
+<var>${NORMALIZED_DOWNLOAD_DIR}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="PASS" start="2026-05-30T17:39:54.316893" elapsed="0.000161"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2026-05-30T17:39:54.317626" level="FAIL">File '/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads/*Outbound*.xlsx' does not exist.</msg>
+<arg>${NORMALIZED_DOWNLOAD_DIR}/*Outbound*.xlsx</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="FAIL" start="2026-05-30T17:39:54.317369" elapsed="0.000336">File '/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads/*Outbound*.xlsx' does not exist.</status>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2026-05-30T17:39:55.321063" level="INFO" html="true">File '&lt;a href="file:///Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads/*Outbound*.xlsx"&gt;/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads/*Outbound*.xlsx&lt;/a&gt;' exists.</msg>
+<arg>${NORMALIZED_DOWNLOAD_DIR}/*Outbound*.xlsx</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2026-05-30T17:39:55.320004" elapsed="0.001219"/>
+</kw>
+<arg>15x</arg>
+<arg>1s</arg>
+<arg>File Should Exist</arg>
+<arg>${NORMALIZED_DOWNLOAD_DIR}/*Outbound*.xlsx</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-05-30T17:39:54.317137" elapsed="1.004248"/>
+</kw>
+<kw name="End TestCase" owner="CommonFunctionality">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-30T17:39:55.322276" elapsed="0.081605"/>
+</kw>
+<status status="PASS" start="2026-05-30T17:39:55.321860" elapsed="0.082145"/>
+</kw>
+<doc>Test case ini bertujuan untuk memastikan bahwa pengguna dapat melakukan cetak kegiatan yang didaftarkan dalam bentuk file Excel.</doc>
+<status status="PASS" start="2026-05-30T17:39:44.552706" elapsed="10.851439"/>
+</test>
+<doc>UT6-1 Melakukan cetak kegiatan yang didaftarkan dalam bentuk file Excel</doc>
+<status status="PASS" start="2026-05-30T17:39:44.501171" elapsed="10.903197"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UT6-1" id="s1" pass="1" fail="0" skip="0">UT6-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
