@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on darwin)" generated="2026-05-30T15:25:01.081690" rpa="false" schemaversion="5">
+<suite id="s1" name="UT4-1" source="/Users/evelinalim/UC/SQA/alp-sqa/Tests/Revision/UT4-1.robot">
+<test id="s1-t1" name="UT4-1 Melakukan Revisi Sendback (Dokumen Tidak Lengkap)" line="6">
+<kw name="Start TestCase" owner="CommonFunctionality">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-30T15:25:01.137941" level="INFO">${chrome_options} = add_argument("--disable-notifications")</msg>
+<var>${chrome_options}</var>
+<arg>add_argument("--disable-notifications")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-30T15:25:01.137825" elapsed="0.000132"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:01.138103" level="INFO">Opening browser 'chrome' to base url 'https://trial.uc.ac.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-30T15:25:01.138011" elapsed="4.785957"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-30T15:25:05.924442" elapsed="0.358763"/>
+</kw>
+<kw name="Add Cookie" owner="SeleniumLibrary">
+<arg>${COOKIENAME}</arg>
+<arg>${COOKIEVALUE}</arg>
+<doc>Adds a cookie to your current session.</doc>
+<status status="PASS" start="2026-05-30T15:25:06.283449" elapsed="0.002289"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-05-30T15:25:06.285789" elapsed="4.492074"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="scrolldashboard"]/button[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:10.778187" elapsed="0.011565"/>
+</kw>
+<status status="PASS" start="2026-05-30T15:25:01.137572" elapsed="9.652433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:10.790381" elapsed="0.017722"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:10.808439" level="INFO">Clicking button '//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]'.</msg>
+<arg>//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:10.808280" elapsed="0.028654"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:10.837089" elapsed="0.219927"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:11.057423" level="INFO">Clicking element '//a[contains(text(), 'My Activity')]'.</msg>
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.057236" elapsed="0.029568"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.087032" elapsed="0.004438"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.091589" elapsed="0.268166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.360022" elapsed="0.009264"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:11.369711" level="INFO">Clicking element '//a[contains(text(), 'Student International')]'.</msg>
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.369535" elapsed="0.031024"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.400739" elapsed="0.004612"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.405524" elapsed="0.271243"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.677174" elapsed="0.011710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:11.689491" level="INFO">Clicking element '//a[contains(text(), 'My Outbound')]'.</msg>
+<arg>//a[contains(text(), 'My Outbound')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:11.689140" elapsed="1.153219"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[contains(text(), 'My Outbound Program List')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:12.842510" elapsed="0.004995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(@class, 'btn-secondary') and contains(., 'Show History')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:12.847607" elapsed="0.006448"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:12.854254" level="INFO">Clicking element '//a[contains(@class, 'btn-secondary') and contains(., 'Show History')]'.</msg>
+<arg>//a[contains(@class, 'btn-secondary') and contains(., 'Show History')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:12.854167" elapsed="0.019701"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//h5[contains(text(), 'History Approval')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:12.874009" elapsed="0.004203"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@id='history_modal']//button[@data-bs-dismiss='modal']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:12.878357" elapsed="0.221919"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-30T15:25:14.102044" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-30T15:25:13.100584" elapsed="1.001717"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:14.103783" level="INFO">Executing JavaScript:
+$('#history_modal .btn-close').trigger('click');
+Without any arguments.</msg>
+<arg>$('#history_modal .btn-close').trigger('click');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-05-30T15:25:14.102791" elapsed="0.009094"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//div[@id='history_modal']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:14.112122" elapsed="0.229983"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(@href,'https://trial.uc.ac.id/student_outbound/form_apply/019cb7d1-6c7e-7bfa-a2b6-4de7941218cf/019e4441-ab4b-75bd-8c08-03b308e6587a')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:14.342404" elapsed="0.012174"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:14.354958" level="INFO">Clicking element '//a[contains(@href,'https://trial.uc.ac.id/student_outbound/form_apply/019cb7d1-6c7e-7bfa-a2b6-4de7941218cf/019e4441-ab4b-75bd-8c08-03b308e6587a')]'.</msg>
+<arg>//a[contains(@href,'https://trial.uc.ac.id/student_outbound/form_apply/019cb7d1-6c7e-7bfa-a2b6-4de7941218cf/019e4441-ab4b-75bd-8c08-03b308e6587a')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:14.354786" elapsed="1.079128"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@ifb-id='attachment_2' and @title='Remove file']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.434136" elapsed="0.009962"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:15.444361" level="INFO">Clicking button '//button[@ifb-id='attachment_2' and @title='Remove file']'.</msg>
+<arg>//button[@ifb-id='attachment_2' and @title='Remove file']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.444239" elapsed="0.027676"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//button[@ifb-id='attachment_2' and @title='Remove file']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.472061" elapsed="0.004164"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="apply_form"]/div[5]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.476309" elapsed="0.267583"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="apply_form"]/div[5]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.744414" elapsed="0.017445"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:15.763027" level="INFO">Clicking button '//*[@id="apply_form"]/div[5]/button'.</msg>
+<arg>//*[@id="apply_form"]/div[5]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.762437" elapsed="0.036314"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//div[contains(text(), 'Are you sure you want to apply this program?')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.798883" elapsed="0.003867"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="aysModal"]/div/div/div[3]/button[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T15:25:15.802914" elapsed="0.220998"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T15:25:16.024373" level="INFO">Clicking button '//*[@id="aysModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>//*[@id="aysModal"]/div/div/div[3]/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T15:25:16.024161" elapsed="0.038931"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//div[contains(text(), 'Please Check Required Attachment.')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T15:25:16.063269" elapsed="0.003941"/>
+</kw>
+<kw name="End TestCase" owner="CommonFunctionality">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-30T15:25:16.067570" elapsed="0.081758"/>
+</kw>
+<status status="PASS" start="2026-05-30T15:25:16.067391" elapsed="0.082000"/>
+</kw>
+<doc>Test case ini bertujuan untuk memastikan bahwa pengguna dapat melakukan revisi sendback pada dokumen yang tidak lengkap.</doc>
+<status status="PASS" start="2026-05-30T15:25:01.137243" elapsed="15.012256"/>
+</test>
+<doc>UT4-1 Melakukan revisi sendback (dokumen tidak lengkap)</doc>
+<status status="PASS" start="2026-05-30T15:25:01.085647" elapsed="15.064072"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UT4-1" id="s1" pass="1" fail="0" skip="0">UT4-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

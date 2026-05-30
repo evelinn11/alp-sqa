@@ -12,8 +12,8 @@ UT3-1 Melihat Riwayat Approval Program yang Terdaftar
     Click Button                      //*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]
 
     # Buka My Activity
-    Wait Until Element Is Visible     //*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]
-    Click Button                      //*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]
+    Wait Until Element Is Visible     //a[contains(text(), 'My Activity')]
+    Click Element                     //a[contains(text(), 'My Activity')]
 
     # Buka Student International
     Wait Until Page Contains Element  //a[contains(text(), 'Student International')]
