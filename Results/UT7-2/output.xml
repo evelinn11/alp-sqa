@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on darwin)" generated="2026-05-30T18:22:16.878372" rpa="false" schemaversion="5">
+<suite id="s1" name="UT7-2" source="/Users/evelinalim/UC/SQA/alp-sqa/Tests/Filters/UT7-2.robot">
+<test id="s1-t1" name="UT7-2 Tambah Filter Country = Nama Negara" line="6">
+<kw name="Start TestCase" owner="CommonFunctionality">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-05-30T18:22:16.931139" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x104f1d7f0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.930615" elapsed="0.000543"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.931218" elapsed="0.000109"/>
+</kw>
+<kw name="Normalize Path" owner="OperatingSystem">
+<msg time="2026-05-30T18:22:16.931429" level="INFO">${NORMALIZED_DOWNLOAD_DIR} = /Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads</msg>
+<var>${NORMALIZED_DOWNLOAD_DIR}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.931368" elapsed="0.000071"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-05-30T18:22:16.931602" level="INFO" html="true">Directory '&lt;a href="file:///Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads"&gt;/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads&lt;/a&gt;' already exists.</msg>
+<arg>${NORMALIZED_DOWNLOAD_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.931474" elapsed="0.000159"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-30T18:22:16.932201" level="INFO">${prefs} = {'download.default_directory': '/Users/evelinalim/UC/SQA/alp-sqa/Resources/Downloads', 'download.prompt_for_download': False, 'directory_upgrade': True}</msg>
+<var>${prefs}</var>
+<arg>download.default_directory=${NORMALIZED_DOWNLOAD_DIR}</arg>
+<arg>download.prompt_for_download=${FALSE}</arg>
+<arg>directory_upgrade=${TRUE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.931735" elapsed="0.000485"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.932273" elapsed="0.000117"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:16.932531" level="INFO">Opening browser 'chrome' to base url 'https://trial.uc.ac.id/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.932440" elapsed="5.147012"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-30T18:22:22.080191" elapsed="0.358539"/>
+</kw>
+<kw name="Add Cookie" owner="SeleniumLibrary">
+<arg>${COOKIENAME}</arg>
+<arg>${COOKIEVALUE}</arg>
+<doc>Adds a cookie to your current session.</doc>
+<status status="PASS" start="2026-05-30T18:22:22.438829" elapsed="0.002247"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-05-30T18:22:22.441143" elapsed="2.262794"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="scrolldashboard"]/button[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T18:22:24.704061" elapsed="0.005716"/>
+</kw>
+<status status="PASS" start="2026-05-30T18:22:16.930199" elapsed="7.779804"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:24.710203" elapsed="0.008154"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:24.718625" level="INFO">Clicking button '//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]'.</msg>
+<arg>//*[@id="tigerpool-header"]/div[1]/header/div/div[2]/div/div[1]/div[5]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:24.718507" elapsed="0.026724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:24.745362" elapsed="0.836809"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:25.582700" level="INFO">Clicking element '//a[contains(text(), 'My Activity')]'.</msg>
+<arg>//a[contains(text(), 'My Activity')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.582471" elapsed="0.038249"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.620935" elapsed="0.004713"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.625764" elapsed="0.264903"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.890937" elapsed="0.007306"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:25.898556" level="INFO">Clicking element '//a[contains(text(), 'Student International')]'.</msg>
+<arg>//a[contains(text(), 'Student International')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.898421" elapsed="0.026346"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Outbound Program')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.924956" elapsed="0.004995"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Outbound Program')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T18:22:25.930126" elapsed="0.266960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Outbound Program')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.197266" elapsed="0.006453"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:26.204004" level="INFO">Clicking element '//a[contains(text(), 'Outbound Program')]'.</msg>
+<arg>//a[contains(text(), 'Outbound Program')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.203877" elapsed="0.712429"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[contains(text(), 'Student Outbound Program List')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.916696" elapsed="0.010081"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:26.927510" level="INFO">Clicking button 'id=filter'.</msg>
+<arg>id=filter</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.927253" elapsed="0.039440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=(//div[contains(@class, 'filter-item')]//select[contains(@class, '_category')])[last()]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.966920" elapsed="0.006575"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:26.973703" level="INFO">Selecting options from selection list 'xpath=(//div[contains(@class, 'filter-item')]//select[contains(@class, '_category')])[last()]' by value ma.country_name.</msg>
+<arg>xpath=(//div[contains(@class, 'filter-item')]//select[contains(@class, '_category')])[last()]</arg>
+<arg>ma.country_name</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.973604" elapsed="0.022246"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-30T18:22:27.996741" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-30T18:22:26.996033" elapsed="1.000998"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:27.998585" level="INFO">Executing JavaScript:
+var inputs = document.querySelectorAll('.filter-item:not(.filter-item-special) input._value'); inputs[inputs.length - 1].value = 'Malaysia'; inputs[inputs.length - 1].dispatchEvent(new Event('change'));
+Without any arguments.</msg>
+<arg>var inputs = document.querySelectorAll('.filter-item:not(.filter-item-special) input._value'); inputs[inputs.length - 1].value = 'Malaysia'; inputs[inputs.length - 1].dispatchEvent(new Event('change'));</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-05-30T18:22:27.997613" elapsed="0.007405"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:28.005549" level="INFO">Clicking button 'id=search'.</msg>
+<arg>id=search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-30T18:22:28.005293" elapsed="0.841350"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-30T18:22:30.848854" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-30T18:22:28.846890" elapsed="2.002258"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Malaysia</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-30T18:22:30.849667" elapsed="0.013275"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//b[contains(text(), 'INTI Little Explorer Camp 2026, Malaysia')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-05-30T18:22:30.863176" elapsed="0.278397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//b[contains(text(), 'INTI Little Explorer Camp 2026, Malaysia')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:31.142120" elapsed="0.009692"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:31.160042" level="INFO">Element '//b[contains(text(), 'INTI Little Explorer Camp 2026, Malaysia')]' is displayed.</msg>
+<arg>//b[contains(text(), 'INTI Little Explorer Camp 2026, Malaysia')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:31.152097" elapsed="0.008022"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:31.166392" level="INFO">Element '//b[contains(text(), 'Woosong University Korea Exchange Program Fall 2026/2027')]' did not exist.</msg>
+<arg>//b[contains(text(), 'Woosong University Korea Exchange Program Fall 2026/2027')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:31.160290" elapsed="0.006154"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2026-05-30T18:22:31.171556" level="INFO">Element '//b[contains(text(), 'Shih Chien Asia University Summer Program 2026')]' did not exist.</msg>
+<arg>//b[contains(text(), 'Shih Chien Asia University Summer Program 2026')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2026-05-30T18:22:31.166560" elapsed="0.005042"/>
+</kw>
+<kw name="End TestCase" owner="CommonFunctionality">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-30T18:22:31.172060" elapsed="0.080691"/>
+</kw>
+<status status="PASS" start="2026-05-30T18:22:31.171829" elapsed="0.080977"/>
+</kw>
+<doc>Test case ini bertujuan untuk memastikan bahwa pengguna dapat menggunakan filter untuk melihat program yang aktif dan kadaluarsa dengan benar.</doc>
+<status status="PASS" start="2026-05-30T18:22:16.929848" elapsed="14.323049"/>
+</test>
+<doc>UT7-2 Tambah Filter Country = Nama Negara</doc>
+<status status="PASS" start="2026-05-30T18:22:16.878869" elapsed="14.374230"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UT7-2" id="s1" pass="1" fail="0" skip="0">UT7-2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

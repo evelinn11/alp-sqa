@@ -5,7 +5,7 @@ Library    OperatingSystem
 *** Variables ***
 ${URL}    https://trial.uc.ac.id/
 ${COOKIENAME}    tokencis
-${COOKIEVALUE}    3f971c241d34d15c7252b73f1ca76e04
+${COOKIEVALUE}    43134097f4675933c31aac3e67a8674b
 ${DOWNLOAD_DIR}   ${CURDIR}/Downloads
 
 *** Keywords ***
